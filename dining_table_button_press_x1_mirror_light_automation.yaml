@@ -1,0 +1,22 @@
+alias: Dining Table Button Press x1 - Mirror Light
+description: ""
+trigger:
+  - device_id: ""
+    domain: ""
+    entity_id: ""
+    platform: device
+  - device_id: ""
+    domain: ""
+    entity_id: ""
+    platform: device
+condition: []
+action:
+  - service: light.turn_on
+    target:
+      entity_id: light.mirror_light
+    data:
+      brightness_pct: 100
+      color_name: >-
+        {{ ['lawngreen', 'pink', 'blueviolet', 'yellow', 'red', 'white',
+        'orange', 'blue'] | random }}
+mode: single
