@@ -1,0 +1,13 @@
+alias: "*test"
+description: ""
+trigger: []
+condition: []
+action:
+  - service: media_player.play_media
+    data:
+      media_content_id: http://192.168.86.75:8123/media/local/pinknoise60.mp3
+      media_content_type: audio/mp3
+      announce: false
+    target:
+      entity_id: media_player.sk_office_display
+mode: single
